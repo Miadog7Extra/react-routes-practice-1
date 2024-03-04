@@ -4,6 +4,8 @@ import { appsData, productsData } from './data.js';
 import Home from './pages/Home';
 import ProductsPage from './pages/Products';
 import './App.css';
+import AppsPage from './pages/Apps/index.jsx';
+import ViewProductPage from './pages/ProductView/ProductViewPage.jsx'
 
 export default function App() {
   const [products, setProducts] = useState(productsData);
@@ -34,6 +36,13 @@ export default function App() {
           path="/products"
           element={<ProductsPage products={products} />}
         />
+        <Route
+          path='/apps'
+          element={<AppsPage apps={apps} />}
+        />
+        <Route path='/products/:id'
+          element={<ViewProductPage products={products} />}
+          />
         <Route path="/" element={<Home />} />
       </Routes>
     </div>
