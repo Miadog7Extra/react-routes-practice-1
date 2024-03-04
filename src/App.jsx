@@ -23,6 +23,9 @@ export default function App() {
             <li>
               <Link to="/products">Products</Link>
             </li>
+            <li>
+              <Link to="apps">Apps</Link>
+            </li>
           </ul>
         </nav>
       </header>
